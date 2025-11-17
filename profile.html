@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Aetherium Hardware</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">AETHERIUM</span>
+            </div>
+            <nav class="navbar-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <div class="navbar-actions">
+                <a href="profile.html" class="nav-icon active">👤</a>
+                <a href="#" class="nav-icon cart-icon">🛒<span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Container -->
+    <main class="profile-container">
+        <div class="container">
+            <h1 class="page-title">My Account</h1>
+
+            <div class="profile-layout">
+                <!-- Sidebar Navigation -->
+                <aside class="profile-sidebar">
+                    <div class="profile-header">
+                        <div class="profile-avatar">👤</div>
+                        <h3 class="profile-name">John Doe</h3>
+                        <p class="profile-email">john@example.com</p>
+                    </div>
+
+                    <nav class="profile-menu">
+                        <a href="#" class="profile-menu-item active" data-section="profile">Profile Info</a>
+                        <a href="#" class="profile-menu-item" data-section="orders">My Orders</a>
+                        <a href="#" class="profile-menu-item" data-section="addresses">Addresses</a>
+                        <a href="#" class="profile-menu-item" data-section="settings">Settings</a>
+                        <a href="#" class="profile-menu-item logout">Logout</a>
+                    </nav>
+                </aside>
+
+                <!-- Profile Content -->
+                <section class="profile-content">
+                    <!-- Profile Info Section -->
+                    <div class="profile-section active" id="profile">
+                        <h2>Profile Information</h2>
+                        <form class="profile-form" id="profileForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" value="John" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" value="Doe" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" value="john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+1 (555) 000-0000">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+                            </div>
+
+                            <button type="submit" class="profile-button">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="profile-section" id="orders">
+                        <h2>My Orders</h2>
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <span class="order-id">Order #12345</span>
+                                    <span class="order-status completed">Completed</span>
+                                </div>
+                                <div class="order-details">
+                                    <p><strong>Date:</strong> November 15, 2024</p>
+                                    <p><strong>Total:</strong> $2,999.99</p>
+                                    <p><strong>Items:</strong> Quantum Processor X1</p>
+                                </div>
+                                <button class="order-button">View Details</button>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <span class="order-id">Order #12344</span>
+                                    <span class="order-status pending">Pending</span>
+                                </div>
+                                <div class="order-details">
+                                    <p><strong>Date:</strong> November 10, 2024</p>
+                                    <p><strong>Total:</strong> $1,899.99</p>
+                                    <p><strong>Items:</strong> Neural GPU Pro</p>
+                                </div>
+                                <button class="order-button">Track Order</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Addresses Section -->
+                    <div class="profile-section" id="addresses">
+                        <h2>Saved Addresses</h2>
+                        <div class="addresses-list">
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h3>Home Address</h3>
+                                    <span class="address-default">Default</span>
+                                </div>
+                                <p>123 Tech Street<br>San Francisco, CA 94102<br>United States</p>
+                                <div class="address-actions">
+                                    <button class="address-button edit">Edit</button>
+                                    <button class="address-button delete">Delete</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-header">
+                                    <h3>Office Address</h3>
+                                </div>
+                                <p>456 Innovation Ave<br>San Francisco, CA 94105<br>United States</p>
+                                <div class="address-actions">
+                                    <button class="address-button edit">Edit</button>
+                                    <button class="address-button delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="profile-button add-address">Add New Address</button>
+                    </div>
+
+                    <!-- Settings Section -->
+                    <div class="profile-section" id="settings">
+                        <h2>Account Settings</h2>
+                        <div class="settings-group">
+                            <h3>Password</h3>
+                            <form class="settings-form" id="passwordForm">
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" id="current-password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-new-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-new-password" required>
+                                </div>
+                                <button type="submit" class="profile-button">Update Password</button>
+                            </form>
+                        </div>
+
+                        <div class="settings-group">
+                            <h3>Notifications</h3>
+                            <label class="settings-checkbox">
+                                <input type="checkbox" checked>
+                                Email me about new products
+                            </label>
+                            <label class="settings-checkbox">
+                                <input type="checkbox" checked>
+                                Send order updates
+                            </label>
+                            <label class="settings-checkbox">
+                                <input type="checkbox">
+                                Marketing emails
+                            </label>
+                        </div>
+
+                        <div class="settings-group danger">
+                            <h3>Danger Zone</h3>
+                            <button class="profile-button danger">Delete Account</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>Aetherium Hardware is your destination for next-generation computing technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Aetherium Hardware. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
